@@ -17,22 +17,20 @@ class MainActivity : AppCompatActivity() {
 
 //            메세지 보기 화면으로 이동
             val myIntent = Intent(this, ViewMessageActivity::class.java)
+
+//            myIntent에 추가정보 담기. (여러개의 데이터 추가도 가능)
+            myIntent.putExtra("message", inputMessage)
+//            myIntent.putExtra()
+
             startActivity(myIntent)
 
-
-
-
         }
-
-
-
 
         btnMoveToOther.setOnClickListener {
 
 //              Intent로, 다른 화면으로 이동해보자.\
             val myIntent = Intent( this, OtherActivity::class.java )
             startActivity(myIntent)
-
 
         }
 
